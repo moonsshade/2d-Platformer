@@ -79,12 +79,8 @@ _data = {
 &"move": SubResource("Animation_x3wgy")
 }
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_cvnsp")
-move_speed = null
-acceleration = null
-breaking = null
-gravity = null
 jump_force = 250.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
