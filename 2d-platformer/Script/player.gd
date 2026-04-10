@@ -14,6 +14,10 @@ var move_imput : float
 
 @onready var sprite : Sprite2D = $Sprite
 @onready var anim : AnimationPlayer = $AnimationPlayer
+@onready var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+var take_damage_sfx : AudioStream = preload("res://Audio/take_damage.wav")
+var coin_sfx : AudioStream = preload("res://Audio/coin.wav")
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta 
@@ -49,6 +53,7 @@ func take_damage (amount : int):
 	health -= amount
 	OnUpdateHealth.emit(health)
 	_damnage_flash()
+	play_sound(take_damage_sfx)
 	
 	if health <= 0:
 		call_deferred("game_over")
@@ -59,9 +64,13 @@ func game_over ():
 func increase_score (amount : int):
 	PlayerStats.score += amount
 	OnUpdateScore.emit(PlayerStats.score)
+	play_sound(coin_sfx)
 	
 func _damnage_flash ():
 	sprite.modulate = Color.RED
 	await get_tree().create_timer(0.05).timeout
 	sprite.modulate = Color.WHITE
  
+func play_sound(sound : AudioStream):
+	audio.stream = sound
+	audio.play()
