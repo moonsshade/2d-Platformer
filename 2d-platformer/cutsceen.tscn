@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cwbhmw0gj01wx"]
+
+[ext_resource type="Script" uid="uid://3sdigee7oywh" path="res://Script/cutsceen.gd" id="1_pwoar"]
+
+[sub_resource type="Animation" id="Animation_8lmin"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_a84r2"]
+resource_name = "new_animation"
+length = 0.82833785
+step = 0.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgo1n"]
+_data = {
+&"RESET": SubResource("Animation_8lmin"),
+&"new_animation": SubResource("Animation_a84r2")
+}
+
+[node name="cutsceen" type="Node2D" unique_id=1085254208]
+script = ExtResource("1_pwoar")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1299800714]
+libraries/ = SubResource("AnimationLibrary_fgo1n")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

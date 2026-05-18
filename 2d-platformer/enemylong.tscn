@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://b48c2omil4pre"]
+
+[ext_resource type="Script" uid="uid://ca0pywsfftcqd" path="res://Script/enemy.gd" id="1_3prmg"]
+[ext_resource type="Texture2D" uid="uid://prkjlu2inoa1" path="res://Sprites/Characters/character_0024.png" id="2_5xnc8"]
+[ext_resource type="Texture2D" uid="uid://40bwecsdo88v" path="res://Sprites/Characters/player/player-skip/player-skip-1.png" id="3_kr7eo"]
+[ext_resource type="Texture2D" uid="uid://bdgchkvn7oa6b" path="res://Sprites/Characters/player/player-skip/player-skip-2.png" id="4_xsiwq"]
+[ext_resource type="Texture2D" uid="uid://cvgwpo8kejfmv" path="res://Sprites/Characters/player/player-skip/player-skip-3.png" id="5_560eb"]
+[ext_resource type="Texture2D" uid="uid://c07ob74vnj2gi" path="res://Sprites/Characters/player/player-skip/player-skip-4.png" id="6_q0wii"]
+[ext_resource type="Texture2D" uid="uid://b5l2djfe77wvd" path="res://Sprites/Characters/player/player-skip/player-skip-5.png" id="7_hqdqw"]
+[ext_resource type="Texture2D" uid="uid://dil8sbixb4idx" path="res://Sprites/Characters/player/player-skip/player-skip-6.png" id="8_v2hiw"]
+[ext_resource type="Texture2D" uid="uid://c1hqexov36uyf" path="res://Sprites/Characters/player/player-skip/player-skip-7.png" id="9_wiiyr"]
+[ext_resource type="Texture2D" uid="uid://2kt6fphy06ev" path="res://Sprites/Characters/player/player-skip/player-skip-8.png" id="10_wsbdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2p0p"]
+size = Vector2(975, 20)
+
+[sub_resource type="Animation" id="Animation_chwpn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("2_5xnc8")]
+}
+
+[sub_resource type="Animation" id="Animation_wrinw"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("3_kr7eo"), ExtResource("4_xsiwq"), ExtResource("5_560eb"), ExtResource("6_q0wii"), ExtResource("7_hqdqw"), ExtResource("8_v2hiw"), ExtResource("9_wiiyr"), ExtResource("10_wsbdt")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_af3po"]
+_data = {
+&"RESET": SubResource("Animation_chwpn"),
+&"walk": SubResource("Animation_wrinw")
+}
+
+[node name="Enemylong" type="Area2D" unique_id=1817967558]
+script = ExtResource("1_3prmg")
+move_speed = 100.0
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=158989358]
+texture = ExtResource("2_5xnc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1674912598]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_f2p0p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=21130341]
+libraries/ = SubResource("AnimationLibrary_af3po")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

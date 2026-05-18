@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c8rhh5j8j4kaa"]
+
+[ext_resource type="Script" uid="uid://bw505fy875n28" path="res://Script/node_2d.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=421996043]
+script = ExtResource("1_wtcfe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2132713229]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=172226132]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "testing testing
+"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2101827014]
+position = Vector2(-84, 54)
