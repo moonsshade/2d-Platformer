@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cqt61nhiqldoj" path="res://Sprites/Characters/character_0000.png" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://8dcbaef5ruj7" path="res://Sprites/Characters/character_0001.png" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://di775t6c7fsaa" path="res://Script/camera_shake.gd" id="3_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://blktxlce31hur" path="res://Sprites/Characters/roboVee2.png" id="4_8erm5"]
 [ext_resource type="Script" uid="uid://be5uedy7ivyjm" path="res://Script/player_ul.gd" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://bru1jb66kwre4" path="res://Sprites/Objects/tile_0044.png" id="4_vgqql"]
+[ext_resource type="Texture2D" uid="uid://dke0xli8pra4n" path="res://Sprites/Characters/roboVee3.png" id="5_f1ek2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
 height = 26.0
@@ -27,7 +29,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_vgqql"]
 resource_name = "idle"
-length = 0.5
+length = 0.36666667
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -35,10 +38,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("1_v0iea")]
+"values": [ExtResource("4_8erm5"), ExtResource("5_f1ek2")]
 }
 
 [sub_resource type="Animation" id="Animation_6t5aa"]
@@ -95,6 +98,8 @@ script = ExtResource("1_cvnsp")
 jump_force = 1600.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=148540915]
+position = Vector2(-2, -5)
+scale = Vector2(0.0623799, 0.06950135)
 texture = ExtResource("1_v0iea")
 offset = Vector2(0, -12)
 
@@ -103,7 +108,7 @@ position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=929891006]
-zoom = Vector2(3, 3)
+zoom = Vector2(5, 5)
 script = ExtResource("3_x3wgy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1790220483]

@@ -37,7 +37,7 @@ func _process(delta):
 		sprite.flip_h = velocity.x > 0
 		
 	if global_position.y > 400:
-		get_tree().change_scene_to_file("res://Scenes/level_4.tscn")
+		get_tree().reload_current_scene()
 	
 	_manage_animation()
 

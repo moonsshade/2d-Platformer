@@ -2,14 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ca0pywsfftcqd" path="res://Script/enemy.gd" id="1_287tu"]
 [ext_resource type="Texture2D" uid="uid://prkjlu2inoa1" path="res://Sprites/Characters/character_0024.png" id="2_0830c"]
-[ext_resource type="Texture2D" uid="uid://40bwecsdo88v" path="res://Sprites/Characters/player/player-skip/player-skip-1.png" id="3_po0sg"]
-[ext_resource type="Texture2D" uid="uid://bdgchkvn7oa6b" path="res://Sprites/Characters/player/player-skip/player-skip-2.png" id="4_haro7"]
-[ext_resource type="Texture2D" uid="uid://cvgwpo8kejfmv" path="res://Sprites/Characters/player/player-skip/player-skip-3.png" id="5_56vhr"]
-[ext_resource type="Texture2D" uid="uid://c07ob74vnj2gi" path="res://Sprites/Characters/player/player-skip/player-skip-4.png" id="6_ta2yt"]
-[ext_resource type="Texture2D" uid="uid://b5l2djfe77wvd" path="res://Sprites/Characters/player/player-skip/player-skip-5.png" id="7_m4x7e"]
-[ext_resource type="Texture2D" uid="uid://dil8sbixb4idx" path="res://Sprites/Characters/player/player-skip/player-skip-6.png" id="8_vt4ob"]
-[ext_resource type="Texture2D" uid="uid://c1hqexov36uyf" path="res://Sprites/Characters/player/player-skip/player-skip-7.png" id="9_hgeoe"]
-[ext_resource type="Texture2D" uid="uid://2kt6fphy06ev" path="res://Sprites/Characters/player/player-skip/player-skip-8.png" id="10_tk7xo"]
+[ext_resource type="Texture2D" uid="uid://dbek6tc7ri4bg" path="res://Sprites/Characters/character_0025.png" id="3_287tu"]
+[ext_resource type="Texture2D" uid="uid://bx6eglpjxl5tg" path="res://Sprites/Characters/character_0026.png" id="4_0830c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lsmp6"]
 radius = 7.071068
@@ -40,10 +34,10 @@ tracks/0/path = NodePath("Sprite:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ExtResource("3_po0sg"), ExtResource("4_haro7"), ExtResource("5_56vhr"), ExtResource("6_ta2yt"), ExtResource("7_m4x7e"), ExtResource("8_vt4ob"), ExtResource("9_hgeoe"), ExtResource("10_tk7xo")]
+"values": [ExtResource("2_0830c"), ExtResource("3_287tu"), ExtResource("4_0830c")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_af3po"]

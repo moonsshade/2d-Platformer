@@ -61,10 +61,10 @@ gravity = 900.0
 jump_force = 260.0
 
 [node name="Enemylong" parent="." unique_id=1277461045 instance=ExtResource("7_53xsp")]
-position = Vector2(82, -185)
+position = Vector2(91, -174)
 
 [node name="Enemylong2" parent="." unique_id=2080891692 instance=ExtResource("7_53xsp")]
-position = Vector2(81, -186)
+position = Vector2(92, -174)
 
 [node name="Enemylong3" parent="." unique_id=1805673154 instance=ExtResource("7_53xsp")]
-position = Vector2(80, -184)
+position = Vector2(92, -173)
