@@ -31,10 +31,11 @@ func _physics_process(delta):
 		velocity.y = -jump_force
 	
 	move_and_slide()
-
+	
 func _process(delta):
 	if velocity.x !=0:
 		sprite.flip_h = velocity.x > 0
+
 		
 	if global_position.y > 400:
 		get_tree().reload_current_scene()
