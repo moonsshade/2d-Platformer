@@ -119,7 +119,7 @@ position = Vector2(0, -12)
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=929891006]
-zoom = Vector2(5, 5)
+zoom = Vector2(10, 10)
 script = ExtResource("3_x3wgy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1790220483]
