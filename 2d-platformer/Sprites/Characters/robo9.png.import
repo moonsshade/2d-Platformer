@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d13nyql8g63iw"
-path="res://.godot/imported/roboVee7.png-49164338de8bccc45972919bea7a7895.ctex"
+uid="uid://cbch4gtr60lxi"
+path="res://.godot/imported/robo9.png-aaf1d783245f6f28df77eab8df9006c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/roboVee7.png"
-dest_files=["res://.godot/imported/roboVee7.png-49164338de8bccc45972919bea7a7895.ctex"]
+source_file="res://Sprites/Characters/robo9.png"
+dest_files=["res://.godot/imported/robo9.png-aaf1d783245f6f28df77eab8df9006c2.ctex"]
 
 [params]
 

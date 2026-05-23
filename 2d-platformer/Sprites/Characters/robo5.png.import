@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lqnswdwh5n76"
-path="res://.godot/imported/walk3.png-ad9747fe863ca77c33b1c4e156d73715.ctex"
+uid="uid://dg6d3ob2fa2s6"
+path="res://.godot/imported/robo5.png-a3bbf326842b6bf458dbe800e2546a56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/walk3.png"
-dest_files=["res://.godot/imported/walk3.png-ad9747fe863ca77c33b1c4e156d73715.ctex"]
+source_file="res://Sprites/Characters/robo5.png"
+dest_files=["res://.godot/imported/robo5.png-a3bbf326842b6bf458dbe800e2546a56.ctex"]
 
 [params]
 

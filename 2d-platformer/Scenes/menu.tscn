@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl41nafc7c13e"]
+[gd_scene format=3 uid="uid://dl41nafc7c13e"]
 
 [ext_resource type="Texture2D" uid="uid://dldhs0psnqaes" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_1rerr"]
 [ext_resource type="Script" uid="uid://oo73ot8ytv55" path="res://Script/menu.gd" id="1_xhh6f"]
@@ -10,7 +10,7 @@ outline_size = 7
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 10
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=1061186326]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xhh6f")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=315317803]
 layout_mode = 0
 offset_left = -3.0
 offset_top = -122.0
@@ -30,7 +30,7 @@ offset_bottom = 1032.0
 texture = ExtResource("1_1rerr")
 expand_mode = 4
 
-[node name="title" type="Label" parent="."]
+[node name="title" type="Label" parent="." unique_id=1761332239]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -46,7 +46,7 @@ grow_vertical = 2
 text = "2D PLATFORMER"
 label_settings = SubResource("LabelSettings_xhh6f")
 
-[node name="PlayButton" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="." unique_id=880350497]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -61,7 +61,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "PLAY"
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="." unique_id=1954143487]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

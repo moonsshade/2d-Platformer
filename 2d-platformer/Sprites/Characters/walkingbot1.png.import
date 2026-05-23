@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blktxlce31hur"
-path="res://.godot/imported/roboVee2.png-5d6e3954751d57ca9e25e83566e959d5.ctex"
+uid="uid://dx8j7s0aped74"
+path="res://.godot/imported/walkingbot1.png-e255eccf13ab5604031093d41c486a87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/roboVee2.png"
-dest_files=["res://.godot/imported/roboVee2.png-5d6e3954751d57ca9e25e83566e959d5.ctex"]
+source_file="res://Sprites/Characters/walkingbot1.png"
+dest_files=["res://.godot/imported/walkingbot1.png-e255eccf13ab5604031093d41c486a87.ctex"]
 
 [params]
 

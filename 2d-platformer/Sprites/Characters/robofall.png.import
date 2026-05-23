@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp7pfw65aqudg"
-path="res://.godot/imported/walk2.png-e0d1208c87e13d497608518e5885439b.ctex"
+uid="uid://kde80kaybccf"
+path="res://.godot/imported/robofall.png-3343e39e00fe1e7564dca76321738244.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/walk2.png"
-dest_files=["res://.godot/imported/walk2.png-e0d1208c87e13d497608518e5885439b.ctex"]
+source_file="res://Sprites/Characters/robofall.png"
+dest_files=["res://.godot/imported/robofall.png-3343e39e00fe1e7564dca76321738244.ctex"]
 
 [params]
 
