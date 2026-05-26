@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 signal OnUpdateHealth (health : int)
 signal OnUpdateScore (score : int)
 
@@ -8,6 +9,8 @@ signal OnUpdateScore (score : int)
 @export var breaking : float = 20
 @export var gravity : float = 500
 @export var jump_force : float = 200
+var jump_count = 0
+@export var max_jumps = 2
 
 @export var health : int = 3
 var move_imput : float 
@@ -18,6 +21,8 @@ var move_imput : float
 
 var take_damage_sfx : AudioStream = preload("res://Audio/take_damage.wav")
 var coin_sfx : AudioStream = preload("res://Audio/coin.wav")
+
+
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta 
@@ -27,9 +32,15 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, move_imput * move_speed, acceleration * delta)
 	else:
 		velocity.x = lerp(velocity.x, 0.0, breaking * delta)
-	if Input.is_action_pressed("jump") and is_on_floor():
+		
+	if is_on_floor():
+		jump_count=0
+	if Input.is_action_just_pressed("jump") and jump_count < max_jumps:
 		velocity.y = -jump_force
+		jump_count += 1
+		
 	
+
 	move_and_slide()
 	
 func _process(delta):
@@ -63,6 +74,7 @@ func game_over ():
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 	
 func increase_score (amount : int):
+	
 	PlayerStats.score += amount
 	OnUpdateScore.emit(PlayerStats.score)
 	play_sound(coin_sfx)

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d0ku0ecsv1awc" path="res://Scenes/enemy.tscn" id="5_t7v2y"]
 [ext_resource type="PackedScene" uid="uid://rycy51n7wpn8" path="res://Scenes/coin.tscn" id="6_ait6c"]
 [ext_resource type="PackedScene" uid="uid://drf228ruhe7oe" path="res://Scenes/end_flag.tscn" id="7_vcilj"]
-[ext_resource type="PackedScene" uid="uid://ci1cm1hx5yd8u" path="res://Scenes/level_3.tscn" id="8_2mgoq"]
+[ext_resource type="PackedScene" uid="uid://h2bahob5aa10" path="res://Scenes/level_4.tscn" id="8_2mgoq"]
 
 [node name="Main" type="Node2D" unique_id=459499464]
 
@@ -99,7 +99,7 @@ position = Vector2(169, -23)
 position = Vector2(264, -14)
 
 [node name="Coin5" parent="Coins" unique_id=1479806716 instance=ExtResource("6_ait6c")]
-position = Vector2(400, -4)
+position = Vector2(489, 0)
 
 [node name="Coin6" parent="Coins" unique_id=1054859625 instance=ExtResource("6_ait6c")]
 position = Vector2(439, 35)
@@ -111,10 +111,10 @@ position = Vector2(521, 21)
 position = Vector2(665, -35)
 
 [node name="Coin9" parent="Coins" unique_id=396665255 instance=ExtResource("6_ait6c")]
-position = Vector2(834, -17)
+position = Vector2(836, -11)
 
 [node name="Coin10" parent="Coins" unique_id=1173374293 instance=ExtResource("6_ait6c")]
-position = Vector2(996, -22)
+position = Vector2(997, -11)
 
 [node name="EndFlag" parent="." unique_id=1193712152 instance=ExtResource("7_vcilj")]
 position = Vector2(1051, -77)

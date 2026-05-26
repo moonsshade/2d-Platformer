@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dhsp6mx4ab78s" path="res://Script/background_parallax.gd" id="1_5e78q"]
 [ext_resource type="TileSet" uid="uid://mdifyellklyg" path="res://Sprites/Tiles/new_tile_set.tres" id="3_5rvg2"]
 [ext_resource type="PackedScene" uid="uid://p4ydtfs8fwne" path="res://Scenes/player.tscn" id="4_jtv8s"]
-[ext_resource type="PackedScene" uid="uid://d0ku0ecsv1awc" path="res://Scenes/enemy.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://b48c2omil4pre" path="res://enemylong.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://drf228ruhe7oe" path="res://Scenes/end_flag.tscn" id="7_fxnjf"]
 [ext_resource type="PackedScene" uid="uid://dl41nafc7c13e" path="res://Scenes/menu.tscn" id="8_xjeco"]
@@ -15,29 +14,26 @@ script = ExtResource("1_5e78q")
 
 [node name="Enemy" type="Node" parent="." unique_id=173683632]
 
-[node name="Enemy2" parent="Enemy" unique_id=1817967558 instance=ExtResource("6_qf6rc")]
+[node name="Enemylong" parent="Enemy" unique_id=1277461045 instance=ExtResource("7_53xsp")]
 visible = false
-position = Vector2(393, 40)
+position = Vector2(91, -174)
 
-[node name="Enemy3" parent="Enemy" unique_id=2086779110 instance=ExtResource("6_qf6rc")]
+[node name="Enemylong2" parent="Enemy" unique_id=2080891692 instance=ExtResource("7_53xsp")]
 visible = false
-position = Vector2(408, 40)
+position = Vector2(92, -174)
 
-[node name="Enemy4" parent="Enemy" unique_id=1846792176 instance=ExtResource("6_qf6rc")]
+[node name="Enemylong3" parent="Enemy" unique_id=1805673154 instance=ExtResource("7_53xsp")]
 visible = false
-position = Vector2(423, 40)
+position = Vector2(92, -173)
 
-[node name="Enemy5" parent="Enemy" unique_id=1516521824 instance=ExtResource("6_qf6rc")]
-visible = false
-position = Vector2(439, 40)
+[node name="Enemylong4" parent="Enemy" unique_id=1817967558 instance=ExtResource("7_53xsp")]
+position = Vector2(852, 48)
 
-[node name="Enemy6" parent="Enemy" unique_id=2145148633 instance=ExtResource("6_qf6rc")]
-visible = false
-position = Vector2(455, 40)
+[node name="Enemylong5" parent="Enemy" unique_id=433260365 instance=ExtResource("7_53xsp")]
+position = Vector2(852, 48)
 
-[node name="Enemy7" parent="Enemy" unique_id=504414288 instance=ExtResource("6_qf6rc")]
-visible = false
-position = Vector2(472, 40)
+[node name="Enemylong6" parent="Enemy" unique_id=46933361 instance=ExtResource("7_53xsp")]
+position = Vector2(853, 48)
 
 [node name="Coins" type="Node" parent="." unique_id=1041268191]
 
@@ -56,15 +52,6 @@ tile_map_data = PackedByteArray("AAD+/wMAAQACAAEAAAD//wMAAQACAAEAAAAAAAMAAQACAAE
 tile_set = ExtResource("3_5rvg2")
 
 [node name="player" parent="." unique_id=448210854 instance=ExtResource("4_jtv8s")]
-position = Vector2(632, -214)
+position = Vector2(518, -26)
 gravity = 900.0
 jump_force = 260.0
-
-[node name="Enemylong" parent="." unique_id=1277461045 instance=ExtResource("7_53xsp")]
-position = Vector2(91, -174)
-
-[node name="Enemylong2" parent="." unique_id=2080891692 instance=ExtResource("7_53xsp")]
-position = Vector2(92, -174)
-
-[node name="Enemylong3" parent="." unique_id=1805673154 instance=ExtResource("7_53xsp")]
-position = Vector2(92, -173)
